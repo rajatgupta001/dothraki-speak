@@ -4,10 +4,6 @@ var btnTranslate = document.querySelector("#btn-translate");
 
 var url = "https://api.funtranslations.com/translate/dothraki.json";
 
-var text = txtInput.value;
-
-console.log(txtInput.value);
-
 function urlGenerator(text)
 {
     return url + "?text=" + text;
@@ -20,7 +16,7 @@ function handlingError()
 
 function clickHandler()
 {
-    fetch(urlGenerator(text))
+    fetch(urlGenerator(txtInput.value))
     .then(response => response.json())
     .then(json => {outputDiv.innerText = json.contents.translated})
     .catch(handlingError)
