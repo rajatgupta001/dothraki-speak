@@ -5,62 +5,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        
+
         body{
-            background-image: url("27839.jpg");
+            margin: 0;
+        }
+
+        .main{
+            height: 800px;
+            width: 100%;
+        }
+
+        .conversion{
+            height: 600px;
+            width: 70%;
+            float:left;
+            background-color: oldlace;
+        }
+
+        .img-div{
+            float: right;
+            width: 30%;
+            height: 600px;
         }
 
         #txt-input{
             margin-top: 3rem;
-            margin-right: 10rem;
             display: block;
             height:10vh;
-            width: 50%;
+            width: 70%;
             padding: 1rem;
         }
 
         #output{
             border: solid black;
-            width: 50%;
+            width: 70%;
             height: 10vh;
             padding: 1rem;
             margin-top: 4rem; 
         }
 
         #funky-header{
-            height: 5rem;
-            padding-top: 2rem;
-            background-color:peru
-        }
-
-        #header-font{
-            font-size: 2rem;
+            margin: 0;
+            height: 200px;
+            padding-top: 0.5rem;
+            text-align: center;
+            background-color:peru;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            color:white;
-            margin: auto;
-
-        img {
-            border-radius: 4px;
-            padding: 5px;
-            width: 150px;
+            color: white;
+            font-size: 2rem;
         }
+            
     </style>
 
     <title>Dothraki speak</title>
 </head>
 <body>
+<div class = "main">
     <div id = "funky-header">
-        <h1 id="header-font">Learn the language of REAL man! Speak dothrakiiiiiiiiiii!</h1>
-    </div>
-    
-    <div style="display: inline;">
-        <div><textarea placeholder = "Please enter text you want to be converted in banana." id = "txt-input"></textarea></div>
-        <button onclick="clickHandler()" id = "btn-translate">Translate</button>
-
-        <div id = "output"></div>
+        <h1>Learn the language of REAL man! Speak dothrakiiiiiiiiiii!</h1>
     </div>
 
-    <img src="dothraki.jpg">
+    <div class="main-area">
+        <div class="conversion">
+            <div>
+                <textarea placeholder = "Please enter text you want to be converted in banana." id = "txt-input"></textarea>
+                <button onclick="clickHandler()" id = "btn-translate">Translate</button>
+            </div>
+
+            <div id = "output"></div>
+        </div>
+
+        <div class="img-div">
+            <img src="dothraki.jpg">
+        </div>
+    </div>
 
     <script src="app.js" type="text/javascript"></script>
 </body>
